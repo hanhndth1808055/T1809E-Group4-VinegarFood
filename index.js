@@ -4,11 +4,13 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
+app.listen(4000);
 
-app.listen(5000);
+app.get("/", function(request, response)  {
+  response.render("home");
+});
 
-
-app.get("/", function (request, response) {
+app.get("/home", function(request, response)  {
   response.render("home");
 });
 

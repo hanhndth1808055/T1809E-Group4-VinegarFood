@@ -1,0 +1,40 @@
+.carousel-inner img {
+    width: 100%;
+    height: 50%;
+}
+
+.carousel .carousel-caption > h2 {
+    font-size: 40px;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #DA251D;
+    display: inline-block;
+    color: #fff;
+}
+
+.carousel .carousel-caption {
+    position: absolute;
+    top: 33%;
+    left: 1.8%;
+    right: auto;
+    width: 96.66666666666666%;
+    color: #fff;
+}
+.carousel .carousel-caption > p {
+    font-size: 30px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    position: absolute;
+    top: 45%;
+    z-index: 5;
+    display: inline-block;
+}
+
+.carousel-control-prev-icon {
+    left: 10px;
+}
+
+.carousel-control-next-icon {
+    right: 10px;
+}
