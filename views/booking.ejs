@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trang chủ</title>
+    <% include common/head %>
+    <link rel="stylesheet" href="meals.css">
+  </head>
+  <body>
+    <% include common/header %>
+<div class="row">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="page-heading container-fluid">
+                <img src="http://www.jwmarriotthanoilife.com/Content/upload/images/inner/FoieGras.jpg" alt="Booking">
+                <div class="heading"><h1>Booking</h1></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid box-content breakfast reservation pt-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center"><h2>TABLE RESERVATION</h2></div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
+                cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
+                inventore non quo veritatis!
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2 booking-form-message">
+            <h3>Complete the Booking Form</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, asperiores beatae commodi corporis deserunt
+                doloribus error explicabo hic magni modi non quasi quia veniam. Dolore et inventore maxime obcaecati
+                perspiciatis!</p>
+        </div>
+        <div class="col-lg-6 booking-box">
+            <form action="#" name="form-booking">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter Name"
+                               required="required">
+                    </div>
+                    <div class="col-lg-6"><input type="email" class="form-control input-lg" name="email" id="email"
+                                                 placeholder="Enter Email" required="required">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control input-lg" name="subject" id="subject"
+                               placeholder="Enter Subject"
+                               required="required">
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="date" class="form-control input-lg" name="date" id="date" placeholder="Date"
+                               required="required">
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="time" class="form-control input-lg" name="time" id="time" placeholder="Time"
+                               required="required">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea name="message" id="message" cols="25" rows="6"
+                                  placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-4 btn-block btn-danger text-white" name="btnBooking"
+                                id="btnBooking">BOOK NOW
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+    <%  include common/footer %>
+  </body>
+</html>

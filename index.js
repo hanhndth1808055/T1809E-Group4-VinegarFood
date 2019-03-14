@@ -58,3 +58,7 @@ app.get("/meals", function (request, response) {
 app.get("/recipe", function (request, response) {
 response.render("recipeofthemonth");
 });
+
+app.get("/booking", function (request, response) {
+response.render("booking");
+});
