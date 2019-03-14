@@ -1,0 +1,82 @@
+.page-heading {
+    position: relative;
+    text-align: center;
+    color: darkslategrey;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+.page-heading img {
+    width: 100%;
+
+}
+
+.page-heading .heading {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.page-heading .heading h1 {
+    color: #333333;
+    opacity: 0.8;
+}
+
+.box-content .heading h2 {
+    height: 75px;
+    background: #DB4437;
+    padding: 13px 0 0 0;
+    position: relative;
+    width: 100%;
+    font-size: 45px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.box-content .heading h2:before {
+    content: "";
+    border-top: 37px solid transparent;
+    border-bottom: 37px solid transparent;
+    border-left: 37px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.box-content .heading h2:after {
+    content: "";
+    border-top: 37px solid transparent;
+    border-bottom: 37px solid transparent;
+    border-right: 37px solid #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.item-detail-img img, .meal-content-img img {
+    width: 100%;
+}
+
+.meal-content-img img {
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: #333333;
+}
+.meal-content-img img:hover {
+    opacity: 0.5;
+}
+.modal-dialog {
+    padding: 70px 0;
+}
+
+.item-detail-heading {
+    color: #333333;
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.2);
+}
