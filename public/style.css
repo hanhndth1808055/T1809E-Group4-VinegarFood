@@ -137,3 +137,9 @@ footer .footer3 a:hover:before {border-color:transparent #555 transparent transp
         color: #77693c;
         padding: 7px;
     }
+    .footer-copyright {
+        background-color: #333333;
+        text-align: center;
+        color: #77693c;
+        padding: 7px;
+    }
