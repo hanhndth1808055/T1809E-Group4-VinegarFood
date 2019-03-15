@@ -48,10 +48,41 @@ top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ?
   padding-left: 15px;
   padding-right: 15px;
 }
-.aboutus{
+.contactus{
 background-color: LightGray
 }
 .clear-both{
 clear: both;
 margin-top: 20px;
+}
+
+.content-box h2 {
+    height: 75px;
+    background: #DB4437;
+    padding: 13px 0 0 0;
+    position: relative;
+    width: 100%;
+    font-size: 45px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.content-box h2:before {
+    content: "";
+    border-top: 37px solid transparent;
+    border-bottom: 37px solid transparent;
+    border-left: 37px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.content-box h2:after {
+    content: "";
+    border-top: 37px solid transparent;
+    border-bottom: 37px solid transparent;
+    border-right: 37px solid #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
