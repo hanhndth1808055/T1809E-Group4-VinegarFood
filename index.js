@@ -16,7 +16,14 @@ var data2 = require("./models/dinner");
 app.listen(4000);
 
 app.get("/", function(request, response)  {
-  response.render("home");
+  var listBreakfast = breakfastController.getAll();
+  var listLunch = lunchController.getAll();
+  var listDinner = dinnerController.getAll();
+  response.render("home", {
+    listBreakfast: listBreakfast,
+    listLunch: listLunch,
+    listDinner: listDinner,
+  });
 });
 
 app.get("/home", function(request, response)  {
