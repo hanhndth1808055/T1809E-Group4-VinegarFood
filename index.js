@@ -4,6 +4,15 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
+var breakfastController = require("./controller/breakfast");
+var data = require("./models/breakfast");
+
+var lunchController = require("./controller/lunch");
+var data1 = require("./models/lunch");
+
+var dinnerController = require("./controller/dinner");
+var data2 = require("./models/dinner");
+
 app.listen(4000);
 
 app.get("/", function(request, response)  {
@@ -51,7 +60,14 @@ app.get("/gallery", function (request, response) {
 
 
 app.get("/meals", function (request, response) {
-  response.render("meals");
+  var listBreakfast = breakfastController.getAll();
+  var listLunch = lunchController.getAll();
+  var listDinner = dinnerController.getAll();
+  response.render("meals", {
+    listBreakfast: listBreakfast,
+    listLunch: listLunch,
+    listDinner: listDinner,
+  });
 });
 
 

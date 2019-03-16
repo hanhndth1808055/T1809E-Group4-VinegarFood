@@ -29,9 +29,7 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
-                cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
-                inventore non quo veritatis!
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
             </p>
         </div>
         <div class="col-lg-2"></div>
@@ -39,38 +37,34 @@
 
     <div class="container">
         <div class="row">
-
-            <div class="col-3 meal-content">
-                <div class="meal-content-img-box">
-                    <a href="#myModal1" data-toggle="modal" data-target="#myModal1"
-                       class="meal-content-img play-icon popup-with-zoom-anim">
-                        <img class="item-img img-thumbnail"
-                             src="https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Grandmas-Sampler_780x390.jpg"
-                             alt="Grandma's Sampler">
-                    </a>
-                </div>
-                <div class="modal" id="myModal1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                            <div class="modal-body">
-                                <h3 class="text-center item-detail-heading">Grandma's Sampler</h3>
-                                <div class="item-detail-img">
-                                    <img src="https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Grandmas-Sampler_780x390.jpg"
-                                         alt="Grandma's Sampler">
-                                </div>
-                                <p class="pt-3 text-center item-detail-text">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Animi culpa deleniti
-                                    deserunt dignissimos illum quae repellat. Ad consectetur deleniti dicta, eligendi
-                                    excepturi facere ipsa, laborum libero magnam, minus officiis quia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+<% listBreakfast.forEach(function(dish){ %>
+  <div class="col-3 meal-content">
+      <div class="meal-content-img-box">
+          <a href="#myModal<%=dish.id%>" data-toggle="modal" data-target="#myModal<%=dish.id%>"
+             class="meal-content-img play-icon popup-with-zoom-anim">
+              <img class="item-img"
+                   src="<%=dish.thumbnail%>"
+                   alt="<%=dish.name%>">
+          </a>
+      </div>
+      <div class="modal" id="myModal<%=dish.id%>">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                  <div class="modal-body">
+                      <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
+                      <div class="item-detail-img">
+                          <img src="<%=dish.thumbnail%>"
+                               alt="<%=dish.name%>">
+                      </div>
+                      <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<% }); %>
         </div>
-
     </div>
 </div>
 <div class="container-fluid box-content breakfast pt-5">
@@ -86,9 +80,7 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
-                cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
-                inventore non quo veritatis!
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
             </p>
         </div>
         <div class="col-lg-2"></div>
@@ -96,41 +88,37 @@
 
     <div class="container">
         <div class="row">
-
-            <div class="col-3 meal-content">
-                <div class="meal-content-img-box">
-                    <a href="#myModal2" data-toggle="modal" data-target="#myModal2"
-                       class="meal-content-img play-icon popup-with-zoom-anim">
-                        <img class="item-img img-thumbnail"
-                             src="https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Grandmas-Sampler_780x390.jpg"
-                             alt="Grandma's Sampler">
-                    </a>
-                </div>
-                <div class="modal" id="myModal2">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                            <div class="modal-body">
-                                <h3 class="text-center item-detail-heading">Grandma's Sampler</h3>
-                                <div class="item-detail-img">
-                                    <img src="https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Grandmas-Sampler_780x390.jpg"
-                                         alt="Grandma's Sampler">
-                                </div>
-                                <p class="pt-3 text-center item-detail-text">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Animi culpa deleniti
-                                    deserunt dignissimos illum quae repellat. Ad consectetur deleniti dicta, eligendi
-                                    excepturi facere ipsa, laborum libero magnam, minus officiis quia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+<% listLunch.forEach(function(dish){ %>
+  <div class="col-3 meal-content">
+      <div class="meal-content-img-box">
+          <a href="#lunch<%=dish.id%>" data-toggle="modal" data-target="#lunch<%=dish.id%>"
+             class="meal-content-img play-icon popup-with-zoom-anim">
+              <img class="item-img"
+                   src="<%=dish.thumbnail%>"
+                   alt="<%=dish.name%>">
+          </a>
+      </div>
+      <div class="modal" id="lunch<%=dish.id%>">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                  <div class="modal-body">
+                      <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
+                      <div class="item-detail-img">
+                          <img src="<%=dish.thumbnail%>"
+                               alt="<%=dish.name%>">
+                      </div>
+                      <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<% }); %>
         </div>
-
     </div>
 </div>
-<div class="container-fluid box-content breakfast pt-5 pb-5">
+<div class="container-fluid box-content breakfast pt-5">
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
@@ -143,48 +131,42 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
-                cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
-                inventore non quo veritatis!
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
             </p>
         </div>
         <div class="col-lg-2"></div>
     </div>
 
     <div class="container">
-        <div class="row">
-
-            <div class="col-3 meal-content">
-                <div class="meal-content-img-box">
-                    <a href="#myModal3" data-toggle="modal" data-target="#myModal3"
-                       class="meal-content-img play-icon popup-with-zoom-anim">
-                        <img class="item-img img-thumbnail"
-                             src="https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Grandmas-Sampler_780x390.jpg"
-                             alt="Grandma's Sampler">
-                    </a>
-                </div>
-                <div class="modal" id="myModal3">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                            <div class="modal-body">
-                                <h3 class="text-center item-detail-heading">Grandma's Sampler</h3>
-                                <div class="item-detail-img">
-                                    <img src="https://crackerbarrel.com/-/media/CrackerBarrel/Menu/Breakfast/Traditional-Favorites/Grandmas-Sampler_780x390.jpg"
-                                         alt="Grandma's Sampler">
-                                </div>
-                                <p class="pt-3 text-center item-detail-text">Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Animi culpa deleniti
-                                    deserunt dignissimos illum quae repellat. Ad consectetur deleniti dicta, eligendi
-                                    excepturi facere ipsa, laborum libero magnam, minus officiis quia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="row mb-5">
+<% listDinner.forEach(function(dish){ %>
+  <div class="col-3 meal-content">
+      <div class="meal-content-img-box">
+          <a href="#dinner<%=dish.id%>" data-toggle="modal" data-target="#dinner<%=dish.id%>"
+             class="meal-content-img play-icon popup-with-zoom-anim">
+              <img class="item-img"
+                   src="<%=dish.thumbnail%>"
+                   alt="<%=dish.name%>">
+          </a>
+      </div>
+      <div class="modal" id="dinner<%=dish.id%>">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                  <div class="modal-body">
+                      <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
+                      <div class="item-detail-img">
+                          <img src="<%=dish.thumbnail%>"
+                               alt="<%=dish.name%>">
+                      </div>
+                      <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<% }); %>
         </div>
-
     </div>
 </div>
     <%  include common/footer %>
