@@ -1,0 +1,26 @@
+.box-content .about-img-box img {
+  width: 100%;
+  height: auto;
+}
+
+. div[class^="col-*"] {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.description-box {
+  padding: 70px 0;
+}
+.description-heading {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+p {
+  text-indent: 2em;
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: #8A2BE2;
+  font-size: 
+}

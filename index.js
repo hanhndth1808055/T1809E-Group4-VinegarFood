@@ -20,7 +20,14 @@ app.get("/", function(request, response)  {
 });
 
 app.get("/home", function(request, response)  {
-  response.render("home");
+  var listBreakfast = breakfastController.getAll();
+  var listLunch = lunchController.getAll();
+  var listDinner = dinnerController.getAll();
+  response.render("home", {
+    listBreakfast: listBreakfast,
+    listLunch: listLunch,
+    listDinner: listDinner,
+  });
 });
 
 
