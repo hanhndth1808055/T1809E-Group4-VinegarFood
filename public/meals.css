@@ -19,13 +19,13 @@
     background: rgba(0, 0, 0, 0.2);
     text-align: left;
     padding: 5px;
-    text-transform: uppercase;
+    padding-top: 20px;
 }
 
 .page-heading .heading h1 {
     color: #333333;
     opacity: 0.8;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Charmonman', cursive;
 }
 
 .box-content .heading h2 {

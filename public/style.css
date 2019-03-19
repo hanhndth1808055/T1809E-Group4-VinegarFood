@@ -6,6 +6,25 @@
     height: 50%;
 }
 
+.carousel-caption p {
+  font-family: 'Charmonman', cursive;
+  font-size: 30px;
+}
+.nav-item .nav-link, .btnBookNow, .btnSearch {
+  font-family: 'Dosis', sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.navbar-collapse .form-inline input::placeholder {
+  font-family: 'Dosis', sans-serif;
+}
+* {
+  font-family: 'Dosis', sans-serif;
+}
+.text-center {
+  text-indent: 0;
+}
+
 .navbar-brand {
     width: 10%;
 }

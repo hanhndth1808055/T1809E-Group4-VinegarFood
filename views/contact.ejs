@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="meals.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-          <script>
-          function myMap() {
-          var mapProp= {
-            center:new google.maps.LatLng(51.508742,-0.120850),
-            zoom:5,
-          };
-          var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-          }
+    <style>
+    #gmap_canvas img {
+        max-width: none !important;
+        background: none !important
+    }
+    .map-box {
+      width: 100%;
+      box-shadow: 5px 5px 12px lightgray;
+    }
+</style>
+<script>
 $(function()
 {
     function after_form_submitted(data)
@@ -82,7 +84,16 @@ $(function()
 </div>
 <div class="col-md-6">
   <div class="heading text-center"><h2>Contact Us</h2></div>
-  <p>
+<div class="">
+
+</div>
+<ul>
+  <li>199 Park Road Extension</li>
+  <li>Middlebury, CT 06762</li>
+  <li>Phone: 203-758-8991</li>
+  <li>info@lrestaurantonline.com</li>
+</ul>
+  <p class="text-center">
      Please send your message below. We will get back to you at the earliest!
   </p>
 </div>
@@ -91,7 +102,18 @@ $(function()
     </div>
     <div class="row mt-5 mb-5">
       <div class="col-md-6">
-        <div id="googleMap" style="width:100%;height:400px;"></div>
+        <div class="map-box">
+          <div style="overflow:hidden;width: 100%;position: relative;">
+      <iframe width="900" height="500"
+              src="https://maps.google.com/maps?width=900&amp;height=500&amp;hl=en&amp;q=VinegarFood%20Restaurant+(VinegarFood%20Restaurant)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+              frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;">
+          <small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a
+                  href="https://embedgooglemaps.com/it/">Embedgooglemaps IT</a> & <a href="https://willoughby-pr.co.uk/">www.gmailbulkemail.com</a>
+          </small>
+      </div>
+      </div>
+        </div>
       </div>
       <div class="col-md-6" id="form_container">
         <form role="form" method="post" id="reused_form">
@@ -122,8 +144,6 @@ $(function()
                 </div>
             </div>
       </div>
-    </div>
-    <div class="col-md-3">
     </div>
       </form>
   </div>

@@ -11,11 +11,7 @@
 .description-box {
   padding: 70px 0;
 }
-.description-heading h2 {
-  font-family: 'Rock Salt', cursive;
-}
-
-.about-detail p {
+.about-detail p, .about-detail li, .about-detail div {
   font-family: 'Charmonman', cursive;
   font-size: 1.2em;
 }
