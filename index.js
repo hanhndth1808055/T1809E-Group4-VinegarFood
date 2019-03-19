@@ -86,7 +86,10 @@ app.get("/meals", function (request, response) {
 
 
 app.get("/recipe", function (request, response) {
-response.render("recipeofthemonth");
+var listBreakfast = breakfastController.getAll();
+response.render("recipeofthemonth", {
+  listBreakfast: listBreakfast,
+});
 });
 
 app.get("/booking", function (request, response) {

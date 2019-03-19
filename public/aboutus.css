@@ -11,10 +11,14 @@
 .description-box {
   padding: 70px 0;
 }
-.description-heading {
-  background: rgba(0, 0, 0, 0.2);
+.description-heading h2 {
+  font-family: 'Rock Salt', cursive;
 }
 
+.about-detail p {
+  font-family: 'Charmonman', cursive;
+  font-size: 1.2em;
+}
 p {
   text-indent: 2em;
 }

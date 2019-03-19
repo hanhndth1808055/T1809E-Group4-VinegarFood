@@ -25,6 +25,7 @@
 .page-heading .heading h1 {
     color: #333333;
     opacity: 0.8;
+    font-family: 'Dancing Script', cursive;
 }
 
 .box-content .heading h2 {
@@ -84,4 +85,8 @@
   color: #333333;
   opacity: 0.8;
   background: rgba(0, 0, 0, 0.2);
+}
+
+..container-fluid {
+  padding-left: 0 !important;
 }
