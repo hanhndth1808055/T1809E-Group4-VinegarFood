@@ -735,6 +735,7 @@ ul.short_ls li {
     visibility: hidden;
     opacity: 0;
     z-index: 99;
+    padding-top: 10%;
 }
 
 .popup-effect:target {

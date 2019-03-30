@@ -36,7 +36,7 @@
         <span id="cartTotal"></span>
       </div>
       <div class="text-center">
-        <button type="button" class="btn-danger" class="btnConfirmCart" name="btnConfirmCart">CONFIRM</button>
+        <button type="button" class="btn-danger" class="openCloseCart btnConfirm" name="btnConfirmCart" aria-hidden="true">CONFIRM</button>
       </div>
     </div>
   </div>
@@ -73,8 +73,8 @@
             </a>
             <div class="on-pic-content">
               <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-              <button class="add" id="item<%=dish.id%>">+</button>
-              <button class="sub" id="item<%=dish.id%>">-</button>
+              <button class="add btn-danger" id="item<%=dish.id%>">+</button>
+              <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
             </div>
           </div>
           <div class="modal" id="myModal<%=dish.id%>">
@@ -130,8 +130,8 @@
               </a>
               <div class="on-pic-content">
                 <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                <button class="add" id="item<%=dish.id%>">+</button>
-                <button class="sub" id="item<%=dish.id%>">-</button>
+                <button class="add btn-danger" id="item<%=dish.id%>">+</button>
+                <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
               </div>
             </div>
             <div class="modal" id="lunch<%=dish.id%>">
@@ -186,8 +186,8 @@
                 </a>
                 <div class="on-pic-content">
                   <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                  <button class="add" id="item<%=dish.id%>">+</button>
-                  <button class="sub" id="item<%=dish.id%>">-</button>
+                  <button class="add btn-danger" id="item<%=dish.id%>">+</button>
+                  <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
                 </div>
               </div>
               <div class="modal" id="dinner<%=dish.id%>">
@@ -242,8 +242,8 @@
                   </a>
                   <div class="on-pic-content">
                     <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                    <button class="add" id="item<%=dish.id%>">+</button>
-                    <button class="sub" id="item<%=dish.id%>">-</button>
+                    <button class="add btn-danger" id="item<%=dish.id%>">+</button>
+                    <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
                   </div>
                 </div>
                 <div class="modal" id="dessert<%=dish.id%>">
@@ -298,8 +298,8 @@
                     </a>
                     <div class="on-pic-content">
                       <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                      <button class="add" id="item<%=dish.id%>">+</button>
-                      <button class="sub" id="item<%=dish.id%>">-</button>
+                      <button class="add btn-danger" id="item<%=dish.id%>">+</button>
+                      <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
                     </div>
                   </div>
                   <div class="modal" id="beverage<%=dish.id%>">

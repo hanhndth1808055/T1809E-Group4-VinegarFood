@@ -66,6 +66,7 @@ $( document ).ready(function() {
 
   // Hide and Show Cart Items
   $('.openCloseCart').click(function(){
+    window.scrollTo(0, 0);
     $('#shoppingCart').toggle();
   });
 
@@ -113,10 +114,4 @@ $( document ).ready(function() {
     $('#cartItems').html(htmlString);
     $('#cartTotal').text("Total: $" + priceTotal);
   }
-});
-
-$(document).ready(function () {
-$('btnConfirmCart').click(function(){
-  document.getElementById('yourDivID').scrollIntoView();
-});
 });

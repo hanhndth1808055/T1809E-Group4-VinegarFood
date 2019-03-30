@@ -44,3 +44,10 @@ body {
     color: #333333;
     opacity: 0.8;
 }
+
+.img-box-ad {
+	width: 100%;
+}
+.img-box-ad img {
+	width: 100%;
+}
