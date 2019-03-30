@@ -1,0 +1,11 @@
+data4 = [
+  {id: 301, price:"5", name: "Chocolate Brownie Lasagna", thumbnail: "https://media.olivegarden.com/en_us/images/product/chocolate-brownie-lasagna-gv-300x187.jpg", description: "Eight decadent layers of rich, fudgy brownie and sweet vanilla cream cheese frosting, topped with chocolate shavings and a chocolate drizzle."},
+  {id: 302, price:"5", name: "Black Tie Mousse Cake", thumbnail: "https://media.olivegarden.com/en_us/images/product/black-tie-mousse-cake-dpv-590x365.jpg", description: "Rich layers of chocolate cake, dark chocolate cheesecake and creamy custard mousse."},
+  {id: 303, price:"6", name: "Dolcini", thumbnail: "https://media.olivegarden.com/en_us/images/product/dolcini-dpv-590x365.jpg", description: "Piccoli Dolci little dessert treats, layered with cake, mousse, pastry creams and berries."},
+  {id: 304, price:"4", name: "Seasonal Sicilian Cheesecake", thumbnail: "https://media.olivegarden.com/en_us/images/product/d-sicilian-cheesecake-with-strawberry-topping-dpv.jpg", description: "Riccotta cheesecake with a shortbread cookie crust, topped with seasonal strawberry sauce."},
+  {id: 305, price:"6", name: "Tiramisu", thumbnail: "https://media.olivegarden.com/en_us/images/product/tiramisu-dpv-590x365.jpg", description: "The classic Italian dessert. A layer of creamy custard set atop espresso-soaked ladyfingers."},
+  {id: 306, price:"5", name: "S'mores Layer Cake", thumbnail: "https://media.olivegarden.com/en_us/images/product/smores-layer-cake-dpv-590x365.jpg", description: "Layers of vanilla-soaked ladyfingers, chocolate mousse and marshmallows, topped with graham crackers, toasted marshmallow and chocolate crunch."},
+  {id: 307, price:"8", name: "Warm Apple Crostata", thumbnail: "https://media.olivegarden.com/en_us/images/product/warm-apple-crostata-dpv-590x365.jpg", description: "Northern Spy apples are baked inside a crispy pastry crust within hours of harvest! Served warm and topped with vanilla ice cream and a caramel drizzle."},
+  {id: 308, price:"10", name: "Zeppoli", thumbnail: "https://media.olivegarden.com/en_us/images/product/zeppoli-dpv-590x365.jpg", description: "Soft, traditional Italian doughnuts dusted with powdered sugar, served with chocolate sauce for dipping."},
+  ];
+module.exports = data4;

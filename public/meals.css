@@ -90,3 +90,23 @@
 ..container-fluid {
   padding-left: 0 !important;
 }
+
+.meal-content {
+  position: relative;
+}
+
+.on-pic-content {
+position: absolute; /* Position the background text */
+bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+background: rgb(0, 0, 0); /* Fallback color */
+background: rgba(255, 255, 255, 0.4); /* Black background with 0.5 opacity */
+color: darkslategrey;
+font-weight: bold;/* Grey text */
+width: 80%;/* Full width *//* Some padding */
+}
+
+@media only screen and (max-width: 1262px) {
+  .on-pic-content p{
+    display: none;
+  }
+}
