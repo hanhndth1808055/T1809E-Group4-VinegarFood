@@ -12,18 +12,18 @@
 </head>
 <body>
   <% include common/header %>
-  <div class="container-fluid">
+  <div class="">
     <div class="row">
-      <div class="page-heading container-fluid">
+      <div class="page-heading ">
         <img src="http://www.jwmarriotthanoilife.com/Content/upload/images/inner/FoieGras.jpg" alt="Meals">
         <div class="heading"><h1>Meals</h1></div>
       </div>
     </div>
-    <div class="container-fluid box-content breakfast pt-5">
+    <div class=" box-content breakfast pt-5">
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-          <div class="breakfast container-fluid">
+          <div class="breakfast ">
             <div class="heading text-center"><h2>Breakfast</h2></div>
           </div>
         </div>
@@ -38,7 +38,7 @@
         <div class="col-lg-2"></div>
       </div>
 
-      <div class="container-fluid">
+      <div class="">
         <div class="row">
           <% listBreakfast.forEach(function(dish){ %>
             <div class="col-3 meal-content">
@@ -49,6 +49,9 @@
                   src="<%=dish.thumbnail%>"
                   alt="<%=dish.name%>">
                 </a>
+                <div class="on-pic-content">
+                  <h6><p class="name font-weight-bolder pl-2"><%=dish.name%></p></h2>
+                </div>
               </div>
               <div class="modal" id="myModal<%=dish.id%>">
                 <div class="modal-dialog">
@@ -70,11 +73,11 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid box-content breakfast pt-5">
+      <div class=" box-content breakfast pt-5">
         <div class="row">
           <div class="col-3"></div>
           <div class="col-6">
-            <div class="breakfast container-fluid">
+            <div class="breakfast ">
               <div class="heading text-center"><h2>Lunch</h2></div>
             </div>
           </div>
@@ -89,7 +92,7 @@
           <div class="col-lg-2"></div>
         </div>
 
-        <div class="container-fluid">
+        <div class="">
           <div class="row">
             <% listLunch.forEach(function(dish){ %>
               <div class="col-3 meal-content">
@@ -100,6 +103,9 @@
                     src="<%=dish.thumbnail%>"
                     alt="<%=dish.name%>">
                   </a>
+                  <div class="on-pic-content">
+                    <h6><p class="name font-weight-bolder pl-2"><%=dish.name%></p></h2>
+                  </div>
                 </div>
                 <div class="modal" id="lunch<%=dish.id%>">
                   <div class="modal-dialog">
@@ -121,11 +127,11 @@
             </div>
           </div>
         </div>
-        <div class="container-fluid box-content breakfast pt-5">
+        <div class=" box-content breakfast pt-5">
           <div class="row">
             <div class="col-3"></div>
             <div class="col-6">
-              <div class="breakfast container-fluid">
+              <div class="breakfast ">
                 <div class="heading text-center"><h2>Dinner</h2></div>
               </div>
             </div>
@@ -140,8 +146,8 @@
             <div class="col-lg-2"></div>
           </div>
 
-          <div class="container-fluid">
-            <div class="row mb-5">
+          <div class="">
+            <div class="row mb-2">
               <% listDinner.forEach(function(dish){ %>
                 <div class="col-3 meal-content">
                   <div class="meal-content-img-box">
@@ -151,6 +157,9 @@
                       src="<%=dish.thumbnail%>"
                       alt="<%=dish.name%>">
                     </a>
+                    <div class="on-pic-content">
+                      <h6><p class="name font-weight-bolder pl-2"><%=dish.name%></p></h2>
+                    </div>
                   </div>
                   <div class="modal" id="dinner<%=dish.id%>">
                     <div class="modal-dialog">
@@ -172,23 +181,132 @@
               </div>
             </div>
           </div>
+          <div class=" box-content breakfast pt-5">
+                  <div class="row">
+                      <div class="col-3"></div>
+                      <div class="col-6">
+                          <div class="breakfast ">
+                              <div class="heading text-center"><h2>Desserts</h2></div>
+                          </div>
+                      </div>
+                      <div class="col-3"></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-2"></div>
+                      <div class="col-lg-8">
+                          <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
+                          </p>
+                      </div>
+                      <div class="col-lg-2"></div>
+                  </div>
+
+                  <div class="">
+                      <div class="row mb-2">
+                          <% listDessert.forEach(function(dish){ %>
+                          <div class="col-3 meal-content">
+                              <div class="meal-content-img-box">
+                                  <a href="#dessert<%=dish.id%>" data-toggle="modal" data-target="#dessert<%=dish.id%>"
+                                     class="meal-content-img play-icon popup-with-zoom-anim">
+                                      <img class="item-img"
+                                           src="<%=dish.thumbnail%>"
+                                           alt="<%=dish.name%>">
+                                  </a>
+                                  <div class="on-pic-content">
+                                    <h6><p class="name font-weight-bolder pl-2"><%=dish.name%></p></h2>
+                                  </div>
+                              </div>
+                              <div class="modal" id="dessert<%=dish.id%>">
+                                  <div class="modal-dialog">
+                                      <div class="modal-content">
+                                          <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                                          <div class="modal-body">
+                                              <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
+                                              <div class="item-detail-img">
+                                                  <img src="<%=dish.thumbnail%>"
+                                                       alt="<%=dish.name%>">
+                                              </div>
+                                              <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <% }); %>
+                      </div>
+                  </div>
+              </div>
+
+              <div class=" box-content breakfast pt-5">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="breakfast ">
+                    <div class="heading text-center"><h2>Beverages</h2></div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
+                </p>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+        <div class="">
+            <div class="row mb-2">
+                <% listBeverage.forEach(function(dish){ %>
+                <div class="col-3 meal-content">
+                    <div class="meal-content-img-box">
+                        <a href="#beverage<%=dish.id%>" data-toggle="modal" data-target="#beverage<%=dish.id%>"
+                           class="meal-content-img play-icon popup-with-zoom-anim">
+                            <img class="item-img"
+                                 src="<%=dish.thumbnail%>"
+                                 alt="<%=dish.name%>">
+                        </a>
+                        <div class="on-pic-content">
+                          <h6><p class="name font-weight-bolder pl-2"><%=dish.name%></p></h2>
+                        </div>
+                    </div>
+                    <div class="modal" id="beverage<%=dish.id%>">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                                <div class="modal-body">
+                                    <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
+                                    <div class="item-detail-img">
+                                        <img src="<%=dish.thumbnail%>"
+                                             alt="<%=dish.name%>">
+                                    </div>
+                                    <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
           <br>
           <br>
           <br>
           <div class="row">
             <div class="container-fluid">
               <div class="row">
-                <div class="page-heading container-fluid">
+                <div class="page-heading ">
                   <div class="heading"><h1>Booking</h1></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container-fluid box-content breakfast reservation pt-5">
+          <div class=" box-content breakfast reservation pt-5">
             <div class="row">
               <div class="col-3"></div>
               <div class="col-6">
-                <div class="breakfast container-fluid">
+                <div class="breakfast ">
                   <div class="heading text-center"><h2>TABLE RESERVATION</h2></div>
                 </div>
               </div>
@@ -259,9 +377,22 @@
                   <div class="col-lg-4"></div>
                 </div>
               </div>
+              <br>
+              <br>
+              <div class="page-heading ">
+                <div class="heading"><h1>News</h1></div>
+              </div>
+              <br>
+              <br>
               <div class="container-fluid">
-                <div class="col-lg-6 breakfast container-fluid">
-                  <div class="heading text-center"><h2>Breaking News</h2></div>
+                <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col-6">
+                    <div class="breakfast ">
+                      <div class="heading text-center"><h2>Breaking News</h2></div>
+                    </div>
+                  </div>
+                  <div class="col-3"></div>
                 </div>
                 <div class="row">
                   <div class="col-lg-2"></div>
@@ -287,6 +418,7 @@
                     <% }); %>
                   </div>
                 </div>
-                <%  include common/footer %>
-              </body>
-              </html>
+              </div>
+              <%  include common/footer %>
+            </body>
+            </html>

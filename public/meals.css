@@ -14,18 +14,20 @@
 .page-heading .heading {
     width: 100%;
     position: absolute;
-    bottom: 8px;
-    left: 16px;
+    bottom: 2px;
     background: rgba(0, 0, 0, 0.2);
     text-align: left;
     padding: 5px;
     padding-top: 20px;
+    padding-left: 10px;
 }
 
 .page-heading .heading h1 {
     color: #333333;
     opacity: 0.8;
     font-family: 'Charmonman', cursive;
+    padding-left: 2%;
+    padding-bottom: 1%;
 }
 
 .box-content .heading h2 {
@@ -102,7 +104,7 @@ background: rgb(0, 0, 0); /* Fallback color */
 background: rgba(255, 255, 255, 0.4); /* Black background with 0.5 opacity */
 color: darkslategrey;
 font-weight: bold;/* Grey text */
-width: 80%;/* Full width *//* Some padding */
+width: 85%;/* Full width *//* Some padding */
 }
 
 @media only screen and (max-width: 1262px) {

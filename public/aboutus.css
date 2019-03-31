@@ -3,6 +3,7 @@
   height: auto;
 }
 
+
 . div[class^="col-*"] {
   padding: 0 !important;
   margin: 0 !important;
@@ -14,6 +15,10 @@
 .about-detail p, .about-detail li, .about-detail div {
   font-family: 'Charmonman', cursive;
   font-size: 1.2em;
+}
+.about-detail p {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 p {
   text-indent: 2em;

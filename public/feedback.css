@@ -33,11 +33,9 @@ body {
     width: 100%;
     position: absolute;
     bottom: 8px;
-    left: 16px;
     background: rgba(0, 0, 0, 0.2);
     text-align: left;
     padding: 5px;
-    text-transform: uppercase;
 }
 
 .page-heading .heading h1 {
