@@ -1,5 +1,8 @@
-@media only screen and (max-width: 930px) {
-    .on-pic-content h2{
-        display: none;
-    }
+
+.msg-error {
+    color: red;
+}
+
+.msg-success {
+    color: #3d9e66;
 }

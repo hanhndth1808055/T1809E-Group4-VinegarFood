@@ -5,6 +5,7 @@
     <title>VinegarFood Restaurant</title>
     <% include common/head %>
     <link rel="stylesheet" href="meals.css">
+    <link rel="stylesheet" href="booking.css">
 </head>
 <body>
 <% include common/header %>
@@ -21,20 +22,19 @@
 </div>
 <div class="container-fluid box-content breakfast reservation pt-5">
     <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
+        <div class="col-3"></div>
+        <div class="col-6">
             <div class="breakfast container-fluid">
                 <div class="heading text-center"><h2>TABLE RESERVATION</h2></div>
             </div>
         </div>
-        <div class="col-lg-3"></div>
+        <div class="col-3"></div>
     </div>
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
-                cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
-                inventore non quo veritatis!
+            <p class="content text-center">As we challenge ourselves with all the difficulty and hardness, don't forget
+                to keep the warmth and the feeling fresh!
             </p>
         </div>
         <div class="col-lg-2"></div>
@@ -43,36 +43,34 @@
         <div class="col-lg-2"></div>
         <div class="col-lg-2 booking-form-message">
             <h3 class="text-uppercase form-header">Complete the Booking Form</h3>
-            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, asperiores beatae
-                commodi corporis deserunt
-                doloribus error explicabo hic magni modi non quasi quia veniam. Dolore et inventore maxime obcaecati
-                perspiciatis!</p>
+            <p class="text-justify">Please fill in your name and email and the time schedule for your appointment so we
+                can serve you up to your utmost satisfaction.</p>
         </div>
         <div class="col-lg-6 booking-box">
             <form action="#" name="form-booking">
                 <div class="row">
                     <div class="col-lg-6">
-                        <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter Name"
-                               required="required">
+                        <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter Name">
+                        <p></p>
                     </div>
                     <div class="col-lg-6"><input type="email" class="form-control input-lg" name="email" id="email"
-                                                 placeholder="Enter Email" required="required">
+                                                 placeholder="Enter Email">
+                        <p></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <input type="text" class="form-control input-lg" name="subject" id="subject"
-                               placeholder="Enter Subject"
-                               required="required">
+                        <input type="text" class="form-control input-lg" name="phone" id="phone"
+                               placeholder="Enter your phone number">
+                        <p></p>
                     </div>
                     <div class="col-lg-3">
-                        <input type="date" class="form-control input-lg" name="date" id="date" placeholder="Date"
-                               required="required">
+                        <input type="date" class="form-control input-lg" name="date" id="date" placeholder="Date">
+                        <p></p>
                     </div>
                     <div class="col-lg-3">
-                        <input type="time" class="form-control input-lg" name="time" id="time" placeholder="Time"
-                               required="required">
-
+                        <input type="time" class="form-control input-lg" name="time" id="time" placeholder="Time">
+                        <p></p>
                     </div>
                 </div>
                 <div class="row">
@@ -81,21 +79,53 @@
                                   placeholder="Enter Your Message"></textarea>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-4 btn-block btn-danger text-white" name="btnBooking"
+                        <button type="button" class="btn btn-4 btn-block btn-danger text-white" name="btnBooking"
                                 id="btnBooking">BOOK NOW
                         </button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#mdConfirmBooking" name="btnValid" id="btnValid">
+                        </button>
                     </div>
-                    <div id="success_message" style="width:100%; height:100%; display:none; "><h3>Posted your feedback
+                    <div id="success_message" style="width:100%; height:100%; display:none; "><h3>Posted your booking
                             successfully!</h3></div>
                     <div id="error_message" style="width:100%; height:100%; display:none; "><h3>Error</h3> Sorry there
                         was an
                         error sending your form.
                     </div>
+                </div>
             </form>
+            <div class="modal fade" id="mdConfirmBooking" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!--data-toggle="modal" data-target="#confirmBooking"-->
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center">BOOKING CONFIRMATION</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            Thank you for your table reservation. If you are sure about your booking information, please
+                            click CONFIRM to finish your booking! If you need to change anything please click CLOSE
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <a href="/"><button type="button" class="btn btn-danger" name="btnConfirm"
+                                    id="btnConfirm">CONFIRM
+                            </button>
+                            </a>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4"></div>
     </div>
+    <div class="col-lg-4"></div>
 </div>
 <% include common/footer %>
+<script src="booking.js"></script>
 </body>
 </html>

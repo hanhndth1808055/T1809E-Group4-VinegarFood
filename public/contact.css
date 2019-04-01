@@ -82,3 +82,12 @@ margin-top: 20px;
     right: 0;
     top: 0;
 }
+
+
+.msg-error {
+    color: red;
+}
+
+.msg-success {
+    color: #3d9e66;
+}

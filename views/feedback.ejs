@@ -1,89 +1,192 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>VinegarFood Restaurant</title>
-  <% include common/head %>
-  <link rel="stylesheet" href="feedback.css">
-  <link rel="stylesheet" href="meals.css">
+    <meta charset="utf-8">
+    <title>VinegarFood Restaurant</title>
+    <% include common/head %>
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="meals.css">
 </head>
 <body>
-  <% include common/header %>
-  <div class="row">
+<% include common/header %>
+<div class="row">
     <div class="container-fluid">
-      <div class="row">
-        <div class="page-heading container-fluid">
-          <img src="http://www.jwmarriotthanoilife.com/Content/upload/images/inner/FoieGras.jpg" alt="Feedback">
-          <div class="heading"><h1>Feedback</h1></div>
+        <div class="row">
+            <div class="page-heading container-fluid">
+                <img src="http://www.jwmarriotthanoilife.com/Content/upload/images/inner/FoieGras.jpg" alt="Feedback">
+                <div class="heading"><h1>Feedback</h1></div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="container-fluid box-content">
+</div>
+<div class="container-fluid box-content">
     <div class="row mt-5">
-      <div class="col-lg-6 container-fluid">
-        <div class="heading text-center"><h2>Rating & Comment</h2></div>
-      </div>
+        <div class="col-lg-6 container-fluid">
+            <div class="heading text-center"><h2>Rating & Comment</h2></div>
+        </div>
     </div>
-    <div class="row mt-2">
+    <div class="row" style="margin-top: 50px">
         <div class="col-lg-2 img-box-ad">
-          <img src="img/ad1.png" alt="ad1">
+            <img src="img/ad1.png" alt="ad1">
         </div>
         <div class="col-lg-8 col-md-offset-3 form-container">
-          <form role="form" method="post" id="reused_form">
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <label>Please indicate your rating about us</label>
-                <p>
-                  <label class="radio-inline">
-                    <input type="radio" name="experience" id="radio_experience" value="bad">
-                    Bad
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="experience" id="radio_experience" value="normal">
-                    Average
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="experience" id="radio_experience" value="good">
-                    Good
-                  </label>
-                </p>
-              </div>
+            <form role="form" method="post" id="form-feedback">
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label>Please indicate your rating about us</label>
+                        <p>
+                            <label class="radio-inline">
+                                <input type="radio" name="experience" id="radio_experience" value="bad">
+                                Bad
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="experience" id="radio_experience" value="normal">
+                                Average
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="experience" id="radio_experience" value="good">
+                                Good
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label for="comments"> Comments:</label>
+                        <textarea class="form-control" type="textarea" name="comment" id="comment"
+                                  placeholder="Your Comment" maxlength="6000" rows="7"></textarea>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <label for="name"> Your Name:</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                        <p></p>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <label for="email"> Email:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group d-flex justify-content-center">
+                        <button type="button" class="btn btn-danger sendbutton" name="btnSend" id="btnSend">SEND</button>
+                        <button type="button" class="btn" data-toggle="modal" data-target="#mdThank" name="btnValid" id="btnValid">
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="modal fade" id="mdThank" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!--data-toggle="modal" data-target="#confirmBooking"-->
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title text-center">THANK YOU!</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            Thank you for your information. We hope to process each day to serve you the best!
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <a href="/"><button type="button" class="btn btn-danger" name="btnConfirm"
+                                                id="btnConfirm">CLOSE
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <label for="comments"> Comments:</label>
-                <textarea class="form-control" type="textarea" name="comments" id="comments"
-                placeholder="Your Comments" maxlength="6000" rows="7"></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <label for="name"> Your Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-              </div>
-              <div class="col-sm-6 form-group">
-                <label for="email"> Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 form-group">
-                <button type="submit" class="btn btn-4 btn-danger text-white">Send Feedback</button>
-              </div>
-            </div>
-          </form>
-          <div id="success_message"><h3>Posted your feedback
-            successfully!</h3></div>
-            <div id="error_message"><h3>Error</h3> Sorry there was an
-              error sending your form.
-            </div>
-          </div>
-          <div class="col-lg-2 img-box-ad">
+
+        </div>
+        <div class="col-lg-2 img-box-ad">
             <img src="img/ad2.png" alt="ad2">
-          </div>
-      </div>
-    </div><br><br>
-    <% include common/footer %>
-  </body>
-  </html>
+        </div>
+    </div>
+</div>
+<br><br>
+<% include common/footer %>
+<script>
+    var btnSend = document.forms['form-feedback']['btnSend'];
+    btnSend.onclick = function () {
+        if (validateForm()) {
+            // alert(1);
+            document.getElementById("btnValid").click();
+        }
+
+    }
+
+    // Trả về true hoặc false.
+    function validateForm() {
+        // Lưu trữ trạng thái validate của cả form.
+        var isValid = true;
+        // Lưu trữ trạng thái validate của first name.
+        var isValidName = true;
+        // Lưu trữ trạng thái validate của last name.
+        var isValidEmail = true;
+        // Lưu trữ trạng thái validate của password.
+        var isValidMessage = true;
+        // Lưu trữ trạng thái validate của confirm password.
+
+        var txtName = document.forms['form-feedback']['name'];
+        // Lấy ra phần tử span nằm kế tiếp của txtFirstName. (dùng để hiển thị thông báo lỗi)
+        var msgName = txtName.nextElementSibling;
+        // Kiểm tra dữ liệu trong input txtFirstName. Nếu không có dữ liệu thì tạo thông báo lỗi.
+        if (txtName.value == null || txtName.value.length == 0) {
+            // Xoá class msg-success (chuyển chữ thành xanh) khỏi span thông báo lỗi (nếu có).
+            msgName.classList.remove('msg-success');
+            // Thêm class msg-error (chuyển chữ thành màu đỏ)
+            msgName.classList.add('msg-error');
+            // Chuyển nội dung text.
+            msgName.innerHTML = 'Name is required!';
+            // Chuyển trạng thái validate của fistName thành false.
+            isValidName = false;
+        } else {
+            msgName.classList.remove('msg-error');
+            msgName.classList.add('msg-success');
+            msgName.innerHTML = 'Ok.';
+        }
+
+        var textEmail = document.forms['form-feedback']['email'];
+        var msgEmail = textEmail.nextElementSibling;
+        if (textEmail.value == null || textEmail.value.length == 0) {
+            msgEmail.classList.remove('msg-success');
+            msgEmail.classList.add('msg-error');
+            msgEmail.innerHTML = 'Email is required!';
+            isValidEmail = false;
+        } else if (textEmail.value != null && textEmail.value.indexOf("@") == -1) {
+            msgEmail.classList.remove('msg-success');
+            msgEmail.classList.add('msg-error');
+            msgEmail.innerHTML = 'Email should include @ character!';
+            isValidEmail = false;
+        } else {
+            msgEmail.classList.remove('msg-error');
+            msgEmail.classList.add('msg-success');
+            msgEmail.innerHTML = 'Ok.';
+        }
+
+        var txtMessage = document.forms['form-feedback']['comment'];
+        var msgMessage = txtMessage.nextElementSibling;
+        if (txtMessage.value == null || txtMessage.value.length == 0) {
+            msgMessage.classList.remove('msg-success');
+            msgMessage.classList.add('msg-error');
+            msgMessage.innerHTML = 'Message is required!';
+            isValidMessage = false;
+        } else {
+            msgMessage.classList.remove('msg-error');
+            msgMessage.classList.add('msg-success');
+            msgMessage.innerHTML = 'Ok.';
+        }
+
+        isValid = isValidName && isValidEmail && isValidMessage;
+        return isValid;
+    }
+</script>
+</body>
+</html>

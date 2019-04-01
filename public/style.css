@@ -1,5 +1,5 @@
 * {
-  font-family: 'Ek Mukta', sans-serif;
+    font-family: 'Ek Mukta', sans-serif;
 }
 body {
     overflow-x: hidden;
@@ -10,22 +10,22 @@ body {
 }
 
 .carousel-caption p {
-  font-family: 'Charmonman', cursive;
-  font-size: 30px;
+    font-family: 'Charmonman', cursive;
+    font-size: 30px;
 }
 .nav-item .nav-link, .btnBookNow, .btnSearch {
-  font-family: 'Dosis', sans-serif;
-  font-weight: bolder;
-  text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
 }
 .navbar-collapse .form-inline input::placeholder {
-  font-family: 'Dosis', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 * {
-  font-family: 'Dosis', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 .text-center {
-  text-indent: 0;
+    text-indent: 0;
 }
 
 .navbar-brand {
@@ -194,4 +194,10 @@ footer .footer3 a:hover:before {
 
 .booking-form-message {
     padding: 70px 0;
+}
+
+@media only screen and (max-width: 1430px) {
+    .form-search {
+        display: none;
+    }
 }
