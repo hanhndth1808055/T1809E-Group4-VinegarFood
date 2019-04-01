@@ -1,405 +1,413 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title>VinegarFood Restaurant</title>
-  <% include common/head %>
-  <link rel="stylesheet" href="meals.css">
-  <link rel="stylesheet" href="try.css">
-  <script src="meals.js" type="text/javascript"></script>
+    <meta charset="utf-8">
+    <title>VinegarFood Restaurant</title>
+    <% include common/head %>
+    <link rel="stylesheet" href="meals.css">
+    <link rel="stylesheet" href="try.css">
+    <link rel="stylesheet" href="booking.css">
+    <script src="meals.js" type="text/javascript"></script>
 </head>
 <body>
-  <% include common/header %>
-  <div class="">
+<% include common/header %>
+<div class="container-fluid">
     <div class="row">
-      <div class="page-heading ">
-        <img src="http://www.jwmarriotthanoilife.com/Content/upload/images/inner/Lobster_2.jpg" alt="Meals">
-        <div class="heading"><h1 class="text-white">Meals & Booking</h1></div>
-      </div>
+        <div class="page-heading container-fluid">
+            <img src="http://www.jwmarriotthanoilife.com/Content/upload/images/inner/FoieGras.jpg" alt="Meals">
+            <div class="heading"><h1>Meals</h1></div>
+        </div>
     </div>
-  </div>
-  <br>
-  <br>
-  <div id="cart-container">
+</div>
+<div id="cart-container">
     <div id="cart">
-      <i class="fa fa-shopping-cart fa-2x openCloseCart" aria-hidden="true"></i>
-      <button id="emptyCart" class="btn-danger">Empty Cart</button>
+        <i class="fa fa-shopping-cart fa-2x openCloseCart" aria-hidden="true"></i>
+        <button id="emptyCart" class="btn-danger">Empty Cart</button>
     </div>
     <span id="itemCount"></span>
-  </div>
+</div>
 
-  <div id="shoppingCart">
+<div id="shoppingCart">
     <div id="cartItemsContainer">
-      <h2 class="text-center">BOOKING CART</h2>
-      <hr>
-      <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
-      <div id="cartItems"></div>
-      <div class="text-right">
-        <span id="cartTotal"></span>
-      </div>
-      <div class="text-center">
-        <button type="button" class="btn-danger" class="openCloseCart btnConfirm" name="btnConfirmCart" aria-hidden="true">CONFIRM</button>
-      </div>
-    </div>
-  </div>
-
-<div class=" box-content breakfast pt-5">
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-      <div class="breakfast ">
-        <div class="heading text-center"><h2>Breakfast</h2></div>
-      </div>
-    </div>
-    <div class="col-3"></div>
-  </div>
-  <div class="row">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-8">
-      <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
-      </p>
-    </div>
-    <div class="col-lg-2"></div>
-  </div>
-
-  <div class="">
-    <div class="row">
-      <% listBreakfast.forEach(function(dish){ %>
-        <div class="col-3 meal-content">
-          <div class="meal-content-img-box">
-            <a href="#myModal<%=dish.id%>" data-toggle="modal" data-target="#myModal<%=dish.id%>"
-              class="meal-content-img play-icon popup-with-zoom-anim">
-              <img class="item-img"
-              src="<%=dish.thumbnail%>"
-              alt="<%=dish.name%>">
-            </a>
-            <div class="on-pic-content">
-              <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-              <button class="add btn-danger" id="item<%=dish.id%>">+</button>
-              <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
-            </div>
-          </div>
-          <div class="modal" id="myModal<%=dish.id%>">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                <div class="modal-body">
-                  <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
-                  <div class="item-detail-img">
-                    <img src="<%=dish.thumbnail%>"
-                    alt="<%=dish.name%>">
-                  </div>
-                  <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <h2 class="text-center">BOOKING CART</h2>
+        <hr>
+        <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
+        <div id="cartItems"></div>
+        <div class="text-right">
+            <span id="cartTotal"></span>
         </div>
-        <% }); %>
-      </div>
-    </div>
-  </div>
-
-  <div class=" box-content breakfast pt-5">
-    <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6">
-        <div class="breakfast ">
-          <div class="heading text-center"><h2>Lunch</h2></div>
+        <div class="text-center">
+            <button type="button" class="btn-danger" class="openCloseCart btnConfirm" name="btnConfirmCart"
+                    aria-hidden="true">CONFIRM
+            </button>
         </div>
-      </div>
-      <div class="col-3"></div>
+    </div>
+</div>
+
+<div class="container-fluid box-content breakfast pt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center"><h2>Breakfast</h2></div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
     </div>
     <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8">
-        <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
-        </p>
-      </div>
-      <div class="col-lg-2"></div>
-    </div>
-
-    <div class="">
-      <div class="row">
-        <% listLunch.forEach(function(dish){ %>
-          <div class="col-3 meal-content">
-            <div class="meal-content-img-box">
-              <a href="#lunch<%=dish.id%>" data-toggle="modal" data-target="#lunch<%=dish.id%>"
-                class="meal-content-img play-icon popup-with-zoom-anim">
-                <img class="item-img"
-                src="<%=dish.thumbnail%>"
-                alt="<%=dish.name%>">
-              </a>
-              <div class="on-pic-content">
-                <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                <button class="add btn-danger" id="item<%=dish.id%>">+</button>
-                <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
-              </div>
-            </div>
-            <div class="modal" id="lunch<%=dish.id%>">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                  <div class="modal-body">
-                    <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
-                    <div class="item-detail-img">
-                      <img src="<%=dish.thumbnail%>"
-                      alt="<%=dish.name%>">
-                    </div>
-                    <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <% }); %>
-        </div>
-      </div>
-    </div>
-    <div class=" box-content breakfast pt-5">
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="col-6">
-          <div class="breakfast ">
-            <div class="heading text-center"><h2>Dinner</h2></div>
-          </div>
-        </div>
-        <div class="col-3"></div>
-      </div>
-      <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-          <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
-          </p>
-        </div>
-        <div class="col-lg-2"></div>
-      </div>
-
-      <div class="">
-        <div class="row">
-          <% listDinner.forEach(function(dish){ %>
-            <div class="col-3 meal-content">
-              <div class="meal-content-img-box">
-                <a href="#dinner<%=dish.id%>" data-toggle="modal" data-target="#dinner<%=dish.id%>"
-                  class="meal-content-img play-icon popup-with-zoom-anim">
-                  <img class="item-img"
-                  src="<%=dish.thumbnail%>"
-                  alt="<%=dish.name%>">
-                </a>
-                <div class="on-pic-content">
-                  <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                  <button class="add btn-danger" id="item<%=dish.id%>">+</button>
-                  <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
-                </div>
-              </div>
-              <div class="modal" id="dinner<%=dish.id%>">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                    <div class="modal-body">
-                      <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
-                      <div class="item-detail-img">
-                        <img src="<%=dish.thumbnail%>"
-                        alt="<%=dish.name%>">
-                      </div>
-                      <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <% }); %>
-          </div>
-        </div>
-      </div>
-      <div class=" box-content breakfast pt-5">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-6">
-            <div class="breakfast ">
-              <div class="heading text-center"><h2>Desserts</h2></div>
-            </div>
-          </div>
-          <div class="col-3"></div>
-        </div>
-        <div class="row">
-          <div class="col-lg-2"></div>
-          <div class="col-lg-8">
             <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
             </p>
-          </div>
-          <div class="col-lg-2"></div>
         </div>
+        <div class="col-lg-2"></div>
+    </div>
 
-        <div class="">
-          <div class="row">
-            <% listDessert.forEach(function(dish){ %>
-              <div class="col-3 meal-content">
+    <div class="container-fluid">
+        <div class="row">
+            <% listBreakfast.forEach(function(dish){ %>
+            <div class="col-lg-3 meal-content">
                 <div class="meal-content-img-box">
-                  <a href="#dessert<%=dish.id%>" data-toggle="modal" data-target="#dessert<%=dish.id%>"
-                    class="meal-content-img play-icon popup-with-zoom-anim">
-                    <img class="item-img"
-                    src="<%=dish.thumbnail%>"
-                    alt="<%=dish.name%>">
-                  </a>
-                  <div class="on-pic-content">
-                    <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                    <button class="add btn-danger" id="item<%=dish.id%>">+</button>
-                    <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
-                  </div>
-                </div>
-                <div class="modal" id="dessert<%=dish.id%>">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                      <div class="modal-body">
-                        <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
-                        <div class="item-detail-img">
-                          <img src="<%=dish.thumbnail%>"
-                          alt="<%=dish.name%>">
-                        </div>
-                        <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <% }); %>
-            </div>
-          </div>
-        </div>
-        <div class=" box-content breakfast pt-5">
-          <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-              <div class="breakfast ">
-                <div class="heading text-center"><h2>Beverages</h2></div>
-              </div>
-            </div>
-            <div class="col-3"></div>
-          </div>
-          <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8">
-              <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
-              </p>
-            </div>
-            <div class="col-lg-2"></div>
-          </div>
-
-          <div class="">
-            <div class="row">
-              <% listBeverage.forEach(function(dish){ %>
-                <div class="col-3 meal-content">
-                  <div class="meal-content-img-box">
-                    <a href="#beverage<%=dish.id%>" data-toggle="modal" data-target="#beverage<%=dish.id%>"
-                      class="meal-content-img play-icon popup-with-zoom-anim">
-                      <img class="item-img"
-                      src="<%=dish.thumbnail%>"
-                      alt="<%=dish.name%>">
+                    <a href="#myModal<%= dish.id %>" data-toggle="modal" data-target="#myModal<%= dish.id %>"
+                       class="meal-content-img play-icon popup-with-zoom-anim">
+                        <img class="item-img"
+                             src="<%= dish.thumbnail %>"
+                             alt="<%= dish.name %>">
                     </a>
                     <div class="on-pic-content">
-                      <h2>$<span class="price"><%=dish.price%></span><p class="name"><%=dish.name%></p></h2>
-                      <button class="add btn-danger" id="item<%=dish.id%>">+</button>
-                      <button class="sub btn-danger" id="item<%=dish.id%>">-</button>
+                        <h2 class="pl-1">$<span class="price"><%= dish.price %></span>
+                            <p class="name pl-1"><%= dish.name %></p></h2>
+                        <button class="add btn-danger" id="item<%= dish.id %>">+</button>
+                        <button class="sub btn-danger" id="item<%= dish.id %>">-</button>
                     </div>
-                  </div>
-                  <div class="modal" id="beverage<%=dish.id%>">
+                </div>
+                <div class="modal" id="myModal<%= dish.id %>">
                     <div class="modal-dialog">
-                      <div class="modal-content">
-                        <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
-                        <div class="modal-body">
-                          <h3 class="text-center item-detail-heading"><%=dish.name%></h3>
-                          <div class="item-detail-img">
-                            <img src="<%=dish.thumbnail%>"
-                            alt="<%=dish.name%>">
-                          </div>
-                          <p class="pt-3 text-center item-detail-text"><%=dish.description%></p>
+                        <div class="modal-content">
+                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <h3 class="text-center item-detail-heading"><%= dish.name %></h3>
+                                <div class="item-detail-img">
+                                    <img src="<%= dish.thumbnail %>"
+                                         alt="<%= dish.name %>">
+                                </div>
+                                <p class="pt-3 text-center item-detail-text"><%= dish.description %></p>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-                <% }); %>
-              </div>
             </div>
-          </div>
-          <div class=" box-content breakfast reservation pt-5">
-            <div class="row">
-              <div class="col-3"></div>
-              <div class="col-6">
-                <div class="breakfast ">
-                  <div class="heading text-center" id="tableReservation"><h2>TABLE RESERVATION</h2></div>
-                </div>
-              </div>
-              <div class="col-3"></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-2"></div>
-              <div class="col-lg-8">
-                <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
-                  cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
-                  inventore non quo veritatis!
-                </p>
-              </div>
-              <div class="col-lg-2"></div>
-            </div>
-            <div class="row">
-              <div class="col-lg-2"></div>
-              <div class="col-lg-2 booking-form-message">
-                <h3 class="text-uppercase form-header">Complete the Booking Form</h3>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, asperiores beatae commodi corporis deserunt
-                  doloribus error explicabo hic magni modi non quasi quia veniam. Dolore et inventore maxime obcaecati
-                  perspiciatis!</p>
-                </div>
-                <div class="col-lg-6 booking-box">
-                  <form action="#" name="form-booking">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter Name"
-                        required="required">
-                      </div>
-                      <div class="col-lg-6"><input type="email" class="form-control input-lg" name="email" id="email"
-                        placeholder="Enter Email" required="required">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <input type="text" class="form-control input-lg" name="subject" id="subject"
-                        placeholder="Enter Subject"
-                        required="required">
-                      </div>
-                      <div class="col-lg-3">
-                        <input type="date" class="form-control input-lg" name="date" id="date" placeholder="Date"
-                        required="required">
-                      </div>
-                      <div class="col-lg-3">
-                        <input type="time" class="form-control input-lg" name="time" id="time" placeholder="Time"
-                        required="required">
+            <% }); %>
+        </div>
+    </div>
+</div>
 
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <textarea name="message" id="message" cols="25" rows="6"
-                        placeholder="Enter Your Message"></textarea>
-                      </div>
-                      <div class="col-md-12">
-                        <button type="submit" class="btn btn-4 btn-block btn-danger text-white" name="btnBooking"
-                        id="btnBooking">BOOK NOW
-                      </button>
-                    </div>
-                    <div id="success_message" style="width:100%; height:100%; display:none; "><h3>Posted your feedback
-                      successfully!</h3></div>
-                      <div id="error_message" style="width:100%; height:100%; display:none; "><h3>Error</h3> Sorry there was an
-                        error sending your form.
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col-lg-4"></div>
-                </div>
-              </div>
+<div class="container-fluid box-content breakfast pt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center"><h2>Lunch</h2></div>
             </div>
-            <%  include common/footer %>
-          </body>
-          </html>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <% listLunch.forEach(function(dish){ %>
+            <div class="col-lg-3 meal-content">
+                <div class="meal-content-img-box">
+                    <a href="#lunch<%= dish.id %>" data-toggle="modal" data-target="#lunch<%= dish.id %>"
+                       class="meal-content-img play-icon popup-with-zoom-anim">
+                        <img class="item-img"
+                             src="<%= dish.thumbnail %>"
+                             alt="<%= dish.name %>">
+                    </a>
+                    <div class="on-pic-content">
+                        <h2 class="pl-1">$<span class="price"><%= dish.price %></span>
+                            <p class="name pl-1"><%= dish.name %></p></h2>
+                        <button class="add btn-danger" id="item<%= dish.id %>">+</button>
+                        <button class="sub btn-danger" id="item<%= dish.id %>">-</button>
+                    </div>
+                </div>
+                <div class="modal" id="lunch<%= dish.id %>">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <h3 class="text-center item-detail-heading"><%= dish.name %></h3>
+                                <div class="item-detail-img">
+                                    <img src="<%= dish.thumbnail %>"
+                                         alt="<%= dish.name %>">
+                                </div>
+                                <p class="pt-3 text-center item-detail-text"><%= dish.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<div class="container-fluid box-content breakfast pt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center"><h2>Dinner</h2></div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <% listDinner.forEach(function(dish){ %>
+            <div class="col-lg-3 meal-content">
+                <div class="meal-content-img-box">
+                    <a href="#dinner<%= dish.id %>" data-toggle="modal" data-target="#dinner<%= dish.id %>"
+                       class="meal-content-img play-icon popup-with-zoom-anim">
+                        <img class="item-img"
+                             src="<%= dish.thumbnail %>"
+                             alt="<%= dish.name %>">
+                    </a>
+                    <div class="on-pic-content">
+                        <h2 class="pl-1">$<span class="price"><%= dish.price %></span>
+                            <p class="name pl-1"><%= dish.name %></p></h2>
+                        <button class="add btn-danger" id="item<%= dish.id %>">+</button>
+                        <button class="sub btn-danger" id="item<%= dish.id %>">-</button>
+                    </div>
+                </div>
+                <div class="modal" id="dinner<%= dish.id %>">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <h3 class="text-center item-detail-heading"><%= dish.name %></h3>
+                                <div class="item-detail-img">
+                                    <img src="<%= dish.thumbnail %>"
+                                         alt="<%= dish.name %>">
+                                </div>
+                                <p class="pt-3 text-center item-detail-text"><%= dish.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<div class="container-fluid box-content breakfast pt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center"><h2>Desserts</h2></div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <% listDessert.forEach(function(dish){ %>
+            <div class="col-lg-3 meal-content">
+                <div class="meal-content-img-box">
+                    <a href="#dessert<%= dish.id %>" data-toggle="modal" data-target="#dessert<%= dish.id %>"
+                       class="meal-content-img play-icon popup-with-zoom-anim">
+                        <img class="item-img"
+                             src="<%= dish.thumbnail %>"
+                             alt="<%= dish.name %>">
+                    </a>
+                    <div class="on-pic-content">
+                        <h2 class="pl-1">$<span class="price"><%= dish.price %></span>
+                            <p class="name pl-1"><%= dish.name %></p></h2>
+                        <button class="add btn-danger" id="item<%= dish.id %>">+</button>
+                        <button class="sub btn-danger" id="item<%= dish.id %>">-</button>
+                    </div>
+                </div>
+                <div class="modal" id="dessert<%= dish.id %>">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <h3 class="text-center item-detail-heading"><%= dish.name %></h3>
+                                <div class="item-detail-img">
+                                    <img src="<%= dish.thumbnail %>"
+                                         alt="<%= dish.name %>">
+                                </div>
+                                <p class="pt-3 text-center item-detail-text"><%= dish.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<div class="container-fluid box-content breakfast pt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center"><h2>Beverages</h2></div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="content text-center">Enjoy a homestyle country breakfast, morning, noon, or night.
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <% listBeverage.forEach(function(dish){ %>
+            <div class="col-lg-3 meal-content">
+                <div class="meal-content-img-box">
+                    <a href="#beverage<%= dish.id %>" data-toggle="modal" data-target="#beverage<%= dish.id %>"
+                       class="meal-content-img play-icon popup-with-zoom-anim">
+                        <img class="item-img"
+                             src="<%= dish.thumbnail %>"
+                             alt="<%= dish.name %>">
+                    </a>
+                    <div class="on-pic-content">
+                        <h2 class="pl-1">$<span class="price"><%= dish.price %></span>
+                            <p class="name pl-1"><%= dish.name %></p></h2>
+                        <button class="add btn-danger" id="item<%= dish.id %>">+</button>
+                        <button class="sub btn-danger" id="item<%= dish.id %>">-</button>
+                    </div>
+                </div>
+                <div class="modal" id="beverage<%= dish.id %>">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <button type="button" class="close text-right pr-2" data-dismiss="modal">&times;</button>
+                            <div class="modal-body">
+                                <h3 class="text-center item-detail-heading"><%= dish.name %></h3>
+                                <div class="item-detail-img">
+                                    <img src="<%= dish.thumbnail %>"
+                                         alt="<%= dish.name %>">
+                                </div>
+                                <p class="pt-3 text-center item-detail-text"><%= dish.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+<div class="container-fluid box-content breakfast reservation pt-5">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="breakfast container-fluid">
+                <div class="heading text-center" id="tableReservation"><h2>TABLE RESERVATION</h2></div>
+            </div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <p class="content text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda
+                cupiditate dolore explicabo. Dolor eaque est facere id quasi quia quis quo, ut veritatis. Animi facilis
+                inventore non quo veritatis!
+            </p>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-2 booking-form-message">
+            <h3 class="text-uppercase form-header">Complete the Booking Form</h3>
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, asperiores beatae
+                commodi corporis deserunt
+                doloribus error explicabo hic magni modi non quasi quia veniam. Dolore et inventore maxime obcaecati
+                perspiciatis!</p>
+        </div>
+        <div class="col-lg-6 booking-box">
+            <form action="#" name="form-booking">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter Name"
+                               required="required">
+                    </div>
+                    <div class="col-lg-6"><input type="email" class="form-control input-lg" name="email" id="email"
+                                                 placeholder="Enter Email" required="required">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control input-lg" name="subject" id="subject"
+                               placeholder="Enter Subject"
+                               required="required">
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="date" class="form-control input-lg" name="date" id="date" placeholder="Date"
+                               required="required">
+                    </div>
+                    <div class="col-lg-3">
+                        <input type="time" class="form-control input-lg" name="time" id="time" placeholder="Time"
+                               required="required">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea name="message" id="message" cols="25" rows="6"
+                                  placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-4 btn-block btn-danger text-white" name="btnBooking"
+                                id="btnBooking">BOOK NOW
+                        </button>
+                    </div>
+                    <div id="success_message"><h3>Posted your feedback
+                            successfully!</h3></div>
+                    <div id="error_message"><h3>Error</h3> Sorry there
+                        was an
+                        error sending your form.
+                    </div>
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+</div>
+<% include common/footer %>
+</body>
+</html>

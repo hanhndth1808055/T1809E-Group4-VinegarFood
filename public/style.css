@@ -1,11 +1,9 @@
 * {
   font-family: 'Ek Mukta', sans-serif;
 }
-
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
-
 .carousel-inner img {
     width: 100%;
     height: 50%;
@@ -177,8 +175,7 @@ footer .footer3 a:hover:before {
     background-color: #333333;
     text-align: center;
     color: #77693c;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
 }
 
 .booking-box input, .booking-box textarea {

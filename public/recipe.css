@@ -9,6 +9,21 @@
     background-color: rgba(255, 255, 255, 0.2);
     width: 100%;}
 
+.page-heading .heading {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding: 5px;
+}
+
+.page-heading .heading h1 {
+    color: #333333;
+    opacity: 0.8;
+}
+
 .recipe-img-box img {
   padding: 70px 0;
   width: 100%;

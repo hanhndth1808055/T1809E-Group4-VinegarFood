@@ -1,0 +1,5 @@
+@media only screen and (max-width: 930px) {
+    .on-pic-content h2{
+        display: none;
+    }
+}
